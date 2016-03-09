@@ -64,6 +64,8 @@
 		83636F8F1B53F22C009F943E /* RCTUIManagerScenarioTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 83636F8E1B53F22C009F943E /* RCTUIManagerScenarioTests.m */; };
 		8385CEF51B873B5C00C6273E /* RCTImageLoaderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8385CEF41B873B5C00C6273E /* RCTImageLoaderTests.m */; };
 		8385CF041B87479200C6273E /* RCTImageLoaderHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 8385CF031B87479200C6273E /* RCTImageLoaderHelpers.m */; };
+		D4AB81AC1C9072FD00510867 /* MyCustomModule.m in Sources */ = {isa = PBXBuildFile; fileRef = D4AB81AB1C9072FD00510867 /* MyCustomModule.m */; };
+		D4AB81AF1C90730B00510867 /* MyCustomViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D4AB81AE1C90730B00510867 /* MyCustomViewManager.m */; };
 		D85B829E1AB6D5D7003F4FE2 /* libRCTVibration.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D85B829C1AB6D5CE003F4FE2 /* libRCTVibration.a */; };
 /* End PBXBuildFile section */
 
@@ -246,6 +248,10 @@
 		8385CEF41B873B5C00C6273E /* RCTImageLoaderTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTImageLoaderTests.m; sourceTree = "<group>"; };
 		8385CF031B87479200C6273E /* RCTImageLoaderHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTImageLoaderHelpers.m; sourceTree = "<group>"; };
 		8385CF051B8747A000C6273E /* RCTImageLoaderHelpers.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTImageLoaderHelpers.h; sourceTree = "<group>"; };
+		D4AB81AA1C9072FD00510867 /* MyCustomModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyCustomModule.h; path = UIExplorer/NativeModules/MyCustomModule.h; sourceTree = "<group>"; };
+		D4AB81AB1C9072FD00510867 /* MyCustomModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyCustomModule.m; path = UIExplorer/NativeModules/MyCustomModule.m; sourceTree = "<group>"; };
+		D4AB81AD1C90730B00510867 /* MyCustomViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyCustomViewManager.h; path = UIExplorer/NativeExampleViews/MyCustomViewManager.h; sourceTree = "<group>"; };
+		D4AB81AE1C90730B00510867 /* MyCustomViewManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyCustomViewManager.m; path = UIExplorer/NativeExampleViews/MyCustomViewManager.m; sourceTree = "<group>"; };
 		D85B82911AB6D5CE003F4FE2 /* RCTVibration.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTVibration.xcodeproj; path = ../../Libraries/Vibration/RCTVibration.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -393,6 +399,7 @@
 		13B07FAE1A68108700A75B9A /* UIExplorer */ = {
 			isa = PBXGroup;
 			children = (
+				D4AB81A91C9072E900510867 /* NativeModules */,
 				272E6B3A1BEA846C001FCF37 /* NativeExampleViews */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -524,6 +531,8 @@
 		272E6B3A1BEA846C001FCF37 /* NativeExampleViews */ = {
 			isa = PBXGroup;
 			children = (
+				D4AB81AD1C90730B00510867 /* MyCustomViewManager.h */,
+				D4AB81AE1C90730B00510867 /* MyCustomViewManager.m */,
 				27F441E81BEBE5030039B79C /* FlexibleSizeExampleView.m */,
 				27F441EA1BEBE5030039B79C /* FlexibleSizeExampleView.h */,
 				272E6B3B1BEA849E001FCF37 /* UpdatePropertiesExampleView.h */,
@@ -578,6 +587,15 @@
 				143BC5951B21E3E100462512 /* UIExplorerIntegrationTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		D4AB81A91C9072E900510867 /* NativeModules */ = {
+			isa = PBXGroup;
+			children = (
+				D4AB81AA1C9072FD00510867 /* MyCustomModule.h */,
+				D4AB81AB1C9072FD00510867 /* MyCustomModule.m */,
+			);
+			name = NativeModules;
 			sourceTree = "<group>";
 		};
 		D85B82921AB6D5CE003F4FE2 /* Products */ = {
@@ -900,9 +918,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				272E6B3F1BEA849E001FCF37 /* UpdatePropertiesExampleView.m in Sources */,
+				D4AB81AF1C90730B00510867 /* MyCustomViewManager.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				27F441EC1BEBE5030039B79C /* FlexibleSizeExampleView.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				D4AB81AC1C9072FD00510867 /* MyCustomModule.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1016,7 +1036,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.facebook.internal.uiexplorer.local;
+				PRODUCT_BUNDLE_IDENTIFIER = com.facebook.internal.uiexplorer.local.xxx;
 				PRODUCT_NAME = UIExplorer;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WARNING_CFLAGS = (
@@ -1042,7 +1062,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited)";
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.facebook.internal.uiexplorer.local;
+				PRODUCT_BUNDLE_IDENTIFIER = com.facebook.internal.uiexplorer.local.xxx;
 				PRODUCT_NAME = UIExplorer;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				WARNING_CFLAGS = (
