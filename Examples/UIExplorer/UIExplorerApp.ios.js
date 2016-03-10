@@ -33,6 +33,8 @@ const {
   Text,
   TouchableHighlight,
   View,
+  NativeAppEventEmitter,
+  NativeModules,
 } = React;
 
 const {
@@ -44,8 +46,16 @@ const {
 
 import type { Value } from 'Animated';
 
-var MyCustomModule = require('react-native').NativeModules.MyCustomModule;
-MyCustomModule.processString({"xiangxixids"});
+var MyNativeModule = NativeModules.MyCustomModule;
+MyNativeModule.processString("xiangxixids");
+
+var subscription = NativeAppEventEmitter.addListener(
+    'EventReminder',
+    (reminder) => {
+        console.log(reminder.name)
+        MyNativeModule.handleEvent(reminder.name)
+    }
+  );
 
 function PathActionMap(path: string): ?Object {
   // Warning! Hacky parsing for example code. Use a library for this!
